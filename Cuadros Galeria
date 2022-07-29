@@ -1,0 +1,31 @@
+Algoritmo CuadrosGaleria
+	Definir Acuadro Como Entero
+	Definir Ncuadros Como Entero
+	Dimension NAcuadros[100000]
+	Dimension Acuadros[10000]
+	Dimension Acuadro[100000]
+	Dimension diezaños[100000]
+	Escribir "Ingrese la cantidad de cuadros"
+	Leer Ncuadros
+	Para t<-1 Hasta Ncuadros Hacer
+		Escribir "Ingrese el nombre del cuadro"
+		Leer nombredelcuadro
+		Escribir "Ingrese el año del cuadro"
+		Leer Acuadros[t]
+	FinPara
+	Para t<-1 Hasta Ncuadros Hacer
+		Si Acuadros[t]>1901 Y Acuadros[t]<2000 Entonces
+			w <- w+1
+		FinSi
+		Si Acuadros[t]>2012 Y Acuadros[t]<=2022 Entonces
+			p <- p+1
+		SiNo
+			Si Acuadros[t]<2012 Entonces
+				r <- r+1
+			FinSi
+		FinSi
+	FinPara
+	Escribir "Numero de cuadros que estan en el siglo XX: ",w
+	Escribir "Numero de cuadros con menos de diez años: ",p
+	Escribir "Renovar stock: ",r
+FinAlgoritmo
